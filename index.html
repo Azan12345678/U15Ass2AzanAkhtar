@@ -1,13 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-<link href="css/style.css" rel="stylesheet">
-<script src="scripts/javascript.js"></script>
- <title>My First WebPage</title>
- </head>
- <body>
- <h1>Home Page</h1>
- <p>This is the HomePage</p>
-<button onclick="sayHi()">Click Me</button>
- </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR PULSE</title>
+
+<style>
+:root{
+    --black:#111;
+    --white:#ffffff;
+    --grey:#f3f4f6;
+    --dark-grey:#666;
+    --blue:#7dd3fc;
+    --blue-dark:#38bdf8;
+    --green:#86efac;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--white);
+    color:var(--black);
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    border-bottom:1px solid #ddd;
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--blue-dark);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--blue-dark);
+}
+
+section{
+    min-height:100vh;
+    padding:120px 10% 80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:850px;
+    line-height:1.8;
+    color:var(--dark-grey);
+}
+
+.hero{
+    background:linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f8fbff 50%,
+        #f3f4f6 100%
+    );
+}
+
+.hero p{
+    font-size:1.15rem;
+}
+
+.button-group{
+    margin-top:35px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:14px 28px;
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.primary{
+    background:var(--blue-dark);
+    color:white;
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+}
+
+.secondary{
+    background:var(--grey);
+    color:black;
+}
+
+.secondary:hover{
+    background:#e5e7eb;
+}
+
+.cards{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+.card{
+    background:var(--grey);
+    padding:30px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.price-card{
+    border-top:5px solid var(--blue-dark);
+}
+
+.featured{
+    border-top:5px solid var(--green);
+}
+
+form{
+    width:100%;
+    max-width:700px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+textarea{
+    resize:none;
+    height:150px;
+}
+
+footer{
+    background:#f7f7f7;
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+
+.highlight{
+    color:var(--blue-dark);
+}
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    h1{
+        font-size:3rem;
+    }
+
+    h2{
+        font-size:2.3rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VR <span>PULSE</span></div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="games.html">Game Library</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+    <h1>Experience The Future With <span class="highlight">VR PULSE</span></h1>
+
+    <p>
+        Premium virtual reality experiences designed for gamers,
+        families, businesses and enthusiasts. Discover immersive worlds,
+        cutting-edge technology and unforgettable adventures in a
+        professional VR environment.
+    </p>
+
+   <div class="button-group">
+    <a href="booking.html" class="btn primary">Book a Session</a>
+    <a href="games.html" class="btn secondary">Explore Games</a>
+</div>
+</section>
+
+<footer>
+    © 2026 VR PULSE • Immersive Virtual Reality Experiences
+</footer>
+<script src="script.js"></script>
+</body>
 </html>

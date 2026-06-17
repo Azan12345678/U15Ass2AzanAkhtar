@@ -1,1 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR PULSE | Booking</title>
 
+<style>
+:root{
+    --black:#111;
+    --white:#ffffff;
+    --grey:#f3f4f6;
+    --blue:#38bdf8;
+    --green:#86efac;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--white);
+    color:var(--black);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    border-bottom:1px solid #ddd;
+    background:white;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.logo span{
+    color:var(--blue);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover,
+.active{
+    color:var(--blue);
+}
+
+.hero{
+    text-align:center;
+    padding:80px 10% 40px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+.booking-container{
+    max-width:800px;
+    margin:40px auto 80px;
+    padding:40px;
+    background:var(--grey);
+    border-radius:20px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+label{
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+textarea{
+    resize:none;
+    min-height:120px;
+}
+
+button{
+    background:var(--blue);
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.info-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.info-card h3{
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#f7f7f7;
+    color:#666;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">VR <span>PULSE</span></div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Game Library</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <link rel="stylesheet" href="style.css">
+</header>
+
+<section class="hero">
+    <h1>Book Your VR Experience</h1>
+
+    <p>
+        Reserve your session at VR PULSE and prepare for an immersive
+        virtual reality adventure. Choose your preferred date, time,
+        experience type and group size.
+    </p>
+</section>
+
+<div class="booking-container">
+
+    <form>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number">
+
+        <label>Booking Date</label>
+        <input type="date" required>
+
+        <label>Booking Time</label>
+        <input type="time" required>
+
+        <label>VR Experience</label>
+        <select>
+            <option>Rebel Moon The Descent</option>
+            <option>Seekers of the Shard Dragonfire</option>
+            <option>Quantum Rift</option>
+            <option>Skyfront Legends</option>
+            <option>starter membership</option>
+            <option>premium membership</option>
+            <option>Elite membership</option>
+            
+        </select>
+
+        <label>Number of Participants</label>
+        <select>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3 People</option>
+            <option>4 People</option>
+            <option>5+ People</option>
+        </select>
+
+        <label>Additional Notes</label>
+        <textarea placeholder="Accessibility requirements, special requests, etc."></textarea>
+
+        <button type="submit">Confirm Booking</button>
+
+    </form>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>Standard Session</h3>
+            <p>60 minutes of immersive VR gameplay.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Group Events</h3>
+            <p>Perfect for parties, schools and team-building.</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Premium Access</h3>
+            <p>Priority bookings and exclusive experiences.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 VR PULSE • Book Your Next Adventure
+</footer>
+<script src="script.js"></script>
+</body>
+</body>
+</html>

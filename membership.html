@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR PULSE | Membership & Pricing</title>
+
+<style>
+:root{
+    --black:#111111;
+    --white:#ffffff;
+    --grey:#f3f4f6;
+    --light-grey:#e5e7eb;
+    --blue:#38bdf8;
+    --green:#86efac;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--white);
+    color:var(--black);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    border-bottom:1px solid #ddd;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--blue);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--black);
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover,
+.active{
+    color:var(--blue);
+}
+
+.hero{
+    text-align:center;
+    padding:80px 10% 50px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    color:#666;
+}
+
+.pricing-grid{
+    width:85%;
+    margin:30px auto 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.plan{
+    background:var(--grey);
+    border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+    transition:0.3s;
+    position:relative;
+}
+
+.plan:hover{
+    transform:translateY(-8px);
+}
+
+.plan h2{
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:3rem;
+    font-weight:bold;
+    color:var(--blue);
+    margin-bottom:20px;
+}
+
+.plan ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+.plan ul li{
+    padding:10px 0;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-primary:hover{
+    opacity:0.9;
+}
+
+.featured{
+    border:3px solid var(--green);
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--green);
+    color:black;
+    font-weight:bold;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+.benefits{
+    width:85%;
+    margin:0 auto 80px;
+    text-align:center;
+}
+
+.benefits h2{
+    margin-bottom:20px;
+}
+
+.benefits-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.benefit-card{
+    background:var(--grey);
+    padding:30px;
+    border-radius:18px;
+}
+
+.benefit-card h3{
+    margin-bottom:12px;
+}
+
+.benefit-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#f7f7f7;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        VR <span>PULSE</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Game Library</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="membership.html" class="active">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<link rel="stylesheet" href="style.css">
+</header>
+
+<section class="hero">
+
+    <h1>Membership & Pricing</h1>
+
+    <p>
+        Choose the membership plan that fits your VR journey. Whether
+        you're visiting occasionally or exploring virtual worlds every
+        week, VR PULSE offers flexible options designed for every type
+        of player.
+    </p>
+
+</section>
+
+<section class="pricing-grid">
+
+    <div class="plan">
+
+        <h2>Starter</h2>
+
+        <div class="price">£15</div>
+
+        <p>Perfect for first-time visitors.</p>
+
+        <ul>
+            <li>✓ 1 Hour Session</li>
+            <li>✓ Access to Standard Games</li>
+            <li>✓ Equipment Included</li>
+            <li>✓ Staff Support</li>
+        </ul>
+
+        <a href="booking.html" class="btn btn-primary">
+            Book Now
+        </a>
+
+    </div>
+
+    <div class="plan featured">
+
+        <div class="badge">MOST POPULAR</div>
+
+        <h2>Premium</h2>
+
+        <div class="price">£35</div>
+
+        <p>For regular VR enthusiasts.</p>
+
+        <ul>
+            <li>✓ Monthly Membership</li>
+            <li>✓ Priority Booking</li>
+            <li>✓ Exclusive Experiences</li>
+            <li>✓ Member Discounts</li>
+            <li>✓ Community Events</li>
+        </ul>
+
+        <a href="booking.html" class="btn btn-primary">
+            Join Premium
+        </a>
+
+    </div>
+
+    <div class="plan">
+
+        <h2>Elite</h2>
+
+        <div class="price">£60</div>
+
+        <p>Unlimited immersive experiences.</p>
+
+        <ul>
+            <li>✓ Unlimited Monthly Access</li>
+            <li>✓ VIP Event Access</li>
+            <li>✓ Premium Support</li>
+            <li>✓ Exclusive Beta Experiences</li>
+            <li>✓ Guest Pass Benefits</li>
+        </ul>
+
+        <a href="booking.html" class="btn btn-primary">
+            Become Elite
+        </a>
+
+    </div>
+
+</section>
+
+<section class="benefits">
+
+    <h2>Membership Benefits</h2>
+
+    <div class="benefits-grid">
+
+        <div class="benefit-card">
+            <h3>Priority Access</h3>
+            <p>
+                Secure popular booking times before they become unavailable.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Exclusive Games</h3>
+            <p>
+                Enjoy member-only experiences and early access releases.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Community Events</h3>
+            <p>
+                Participate in tournaments, challenges and special events.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <h3>Member Discounts</h3>
+            <p>
+                Save on bookings, merchandise and future experiences.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 VR PULSE • Membership & Pricing
+</footer>
+<script src="script.js"></script>
+</body>
+</body>
+</html>
